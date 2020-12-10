@@ -5,7 +5,7 @@ const INITIAL_STATE = {
 export const beersReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case "FETCH_BEERS":
-      return { ...state };
+      return { ...state, default: action.payload.default };
     default:
       return { ...state };
   }
