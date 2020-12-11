@@ -18,11 +18,38 @@ function Home() {
 
   return (
     <S.BeersList>
-      <h1>Favourite Beers</h1>
+      <h2>Favourite Beers</h2>
       <S.Beers>
-        {starter.map((beer) => {
-          <BeerCard />;
-        })}
+        {starter.map((beer) => (
+          <BeerCard
+            key={beer.id}
+            name={beer.name}
+            tagline={beer.tagline}
+            image={beer.image_url}
+          />
+        ))}
+      </S.Beers>
+      <h2>Strongest Beers</h2>
+      <S.Beers>
+        {strong.map((beer) => (
+          <BeerCard
+            key={beer.id}
+            name={beer.name}
+            tagline={beer.tagline}
+            image={beer.image_url}
+          />
+        ))}
+      </S.Beers>
+      <h2>Bitter Beers</h2>
+      <S.Beers>
+        {bitter.map((beer) => (
+          <BeerCard
+            key={beer.id}
+            name={beer.name}
+            tagline={beer.tagline}
+            image={beer.image_url}
+          />
+        ))}
       </S.Beers>
     </S.BeersList>
   );

@@ -1,11 +1,13 @@
 import React from "react";
+import * as S from "./BeerCard.style";
 
-function BeerCard() {
+function BeerCard({ name, tagline, image }) {
   return (
-    <>
-      <h2>Beer Card</h2>
-      <p>Beer Info</p>
-    </>
+    <S.BeerCard>
+      <h2>{name}</h2>
+      <img src={image} alt={name} />
+      <p>{tagline}</p>
+    </S.BeerCard>
   );
 }
 
