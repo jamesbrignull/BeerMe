@@ -7,7 +7,7 @@ export const loadBeers = () => async (dispatch) => {
   dispatch({
     type: "FETCH_BEERS",
     payload: {
-      default: defaultBeersData,
+      default: defaultBeersData.data,
     },
   });
 };
