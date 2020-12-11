@@ -1,13 +1,17 @@
 import axios from "axios";
-import { defaultBeersGET } from "../../api";
+import { starterBeersGET, strongBeersGET, bitterBeersGET } from "../../api";
 
 export const loadBeers = () => async (dispatch) => {
-  const defaultBeersData = await axios.get(defaultBeersGET());
+  const starterBeersData = await axios.get(starterBeersGET());
+  const strongBeersData = await axios.get(strongBeersGET());
+  const bitterBeersData = await axios.get(bitterBeersGET());
 
   dispatch({
     type: "FETCH_BEERS",
     payload: {
-      default: defaultBeersData.data,
+      starter: starterBeersData.data,
+      strong: strongBeersData.data,
+      bitter: bitterBeersData.data,
     },
   });
 };
