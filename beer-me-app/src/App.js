@@ -1,15 +1,12 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { loadBeers } from "./redux/beers/beersActions";
+// Pages & Components
+import Home from "./pages/Home/Home";
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(loadBeers());
-  });
   return (
     <>
       <h1>This is App</h1>
+      <Home />
     </>
   );
 }
