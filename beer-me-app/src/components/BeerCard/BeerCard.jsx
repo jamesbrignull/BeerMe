@@ -4,9 +4,8 @@ import * as S from "./BeerCard.style";
 function BeerCard({ name, tagline, image }) {
   return (
     <S.BeerCard>
-      <h2>{name}</h2>
       <img src={image} alt={name} />
-      <p>{tagline}</p>
+      <h2>{name}</h2>
     </S.BeerCard>
   );
 }
