@@ -8,22 +8,36 @@ function BeerDetail() {
   const { beer } = useSelector((state) => state.details);
 
   return (
-    <>
-      <h2>{beer[0].name}</h2>
-      <p>{beer[0].tagline}</p>
-      <img src={beer[0].image_url} alt={beer.name} />
-      <p>{beer[0].description}</p>
-      <p>ABV: {beer[0].abv}</p>
-      <p>IBU: {beer[0].ibu}</p>
-      <p>
-        Food Pairings:
-        {beer[0].food_pairing.map((food) => (
-          <p key={uuid}>{food}</p>
-        ))}
-      </p>
+    <S.CardShadow>
+      <S.Detail>
+        <S.ShowInfo>
+          <h2>{beer[0].name}</h2>
+          <h2>
+            <span>{beer[0].tagline}</span>
+          </h2>
+          <img src={beer[0].image_url} alt={beer.name} />
+        </S.ShowInfo>
 
-      <p>Brewer's tips: {beer[0].brewers_tips}</p>
-    </>
+        <p>{beer[0].description}</p>
+        <p>
+          <span>ABV:</span> {beer[0].abv}
+        </p>
+        <p>
+          <span>IBU:</span> {beer[0].ibu}
+        </p>
+        <p>
+          <span>Food Pairings:</span>
+
+          {beer[0].food_pairing.map((food) => (
+            <p key={uuid}>{food}</p>
+          ))}
+        </p>
+
+        <p>
+          <span>Brewer's tips:</span> {beer[0].brewers_tips}
+        </p>
+      </S.Detail>
+    </S.CardShadow>
   );
 }
 

@@ -29,7 +29,6 @@ function Home() {
   return (
     <S.BeersList>
       <BeerDetail />
-
       <S.Beers>
         <h2>Favourite Beers</h2>
         <Carousel breakPoints={breakPoints}>

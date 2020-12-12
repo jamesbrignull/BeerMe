@@ -48,6 +48,11 @@ const GlobalStyle = createGlobalStyle`
         font-weight: bold;
         font-family: 'Quattrocento', serif;
     }
+
+    span{
+        font-weight: bold;
+        color:#673ab7;
+    }
 `;
 
 export default GlobalStyle;
