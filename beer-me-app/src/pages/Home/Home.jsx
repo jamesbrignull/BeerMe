@@ -6,6 +6,7 @@ import { loadBeers } from "../../redux/beers/beersActions";
 // Components
 import BeerCard from "../../components/BeerCard/BeerCard";
 import Carousel from "react-elastic-carousel";
+import BeerDetail from "../../components/BeerDetail/BeerDetail";
 
 function Home() {
   //Adding to store
@@ -27,6 +28,8 @@ function Home() {
 
   return (
     <S.BeersList>
+      <BeerDetail />
+
       <S.Beers>
         <h2>Favourite Beers</h2>
         <Carousel breakPoints={breakPoints}>
