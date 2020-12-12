@@ -33,6 +33,7 @@ function Home() {
           {starter.map((beer) => (
             <BeerCard
               key={beer.id}
+              id={beer.id}
               name={beer.name}
               tagline={beer.tagline}
               image={beer.image_url}
@@ -47,6 +48,7 @@ function Home() {
           {strong.map((beer) => (
             <BeerCard
               key={beer.id}
+              id={beer.id}
               name={beer.name}
               tagline={beer.tagline}
               image={beer.image_url}
@@ -61,6 +63,7 @@ function Home() {
           {bitter.map((beer) => (
             <BeerCard
               key={beer.id}
+              id={beer.id}
               name={beer.name}
               tagline={beer.tagline}
               image={beer.image_url}
