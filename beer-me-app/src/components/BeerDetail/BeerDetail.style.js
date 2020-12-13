@@ -42,8 +42,8 @@ export const ShowInfo = styled(motion.div)`
   align-items: center;
 
   img {
-    width: 20%;
-    height: 40rem;
+    width: 25%;
+    height: auto;
     padding: 1rem 0rem;
   }
 `;

@@ -3,12 +3,18 @@ import * as S from "./BeerDetail.style";
 import { v4 as uuid } from "uuid";
 // Redux
 import { useSelector } from "react-redux";
+// React Router
+import { Link } from "react-router-dom";
 
 function BeerDetail() {
   const { beer } = useSelector((state) => state.details);
 
   return (
-    <S.CardShadow>
+    <>
+      <Link to="/">
+        <S.CardShadow />
+      </Link>
+
       <S.Detail>
         <S.ShowInfo>
           <h2>{beer[0].name}</h2>
@@ -37,7 +43,7 @@ function BeerDetail() {
           <span>Brewer's tips:</span> {beer[0].brewers_tips}
         </p>
       </S.Detail>
-    </S.CardShadow>
+    </>
   );
 }
 

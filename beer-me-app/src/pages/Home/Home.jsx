@@ -7,8 +7,13 @@ import { loadBeers } from "../../redux/beers/beersActions";
 import BeerCard from "../../components/BeerCard/BeerCard";
 import Carousel from "react-elastic-carousel";
 import BeerDetail from "../../components/BeerDetail/BeerDetail";
+// React Router
+import { useLocation } from "react-router-dom";
 
 function Home() {
+  const location = useLocation();
+  const pathID = location.pathname.split("/")[2];
+
   //Adding to store
   const dispatch = useDispatch();
   useEffect(() => {
@@ -28,7 +33,7 @@ function Home() {
 
   return (
     <S.BeersList>
-      <BeerDetail />
+      {pathID && <BeerDetail />}
       <S.Beers>
         <h2>Favourite Beers</h2>
         <Carousel breakPoints={breakPoints}>
