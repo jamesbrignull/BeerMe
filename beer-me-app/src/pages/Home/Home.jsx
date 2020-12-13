@@ -9,6 +9,8 @@ import Carousel from "react-elastic-carousel";
 import BeerDetail from "../../components/BeerDetail/BeerDetail";
 // React Router
 import { useLocation } from "react-router-dom";
+// Misc
+import { v4 as uuid } from "uuid";
 
 function Home() {
   const location = useLocation();
@@ -39,7 +41,7 @@ function Home() {
         <Carousel breakPoints={breakPoints}>
           {starter.map((beer) => (
             <BeerCard
-              key={beer.id}
+              key={uuid()}
               id={beer.id}
               name={beer.name}
               tagline={beer.tagline}
@@ -54,7 +56,7 @@ function Home() {
         <Carousel breakPoints={breakPoints}>
           {strong.map((beer) => (
             <BeerCard
-              key={beer.id}
+              key={uuid()}
               id={beer.id}
               name={beer.name}
               tagline={beer.tagline}
@@ -69,7 +71,7 @@ function Home() {
         <Carousel breakPoints={breakPoints}>
           {bitter.map((beer) => (
             <BeerCard
-              key={beer.id}
+              key={uuid()}
               id={beer.id}
               name={beer.name}
               tagline={beer.tagline}
